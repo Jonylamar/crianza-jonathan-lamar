@@ -1,84 +1,76 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "nunito";
   src: url(../Assets/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
 }
-
 /**INICIO**/
-
 body {
   font-family: "nunito", !important;
   width: 100%;
-
 }
+
 #container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 200px auto auto 200px;
-    grid-template-areas: 
-    "header"
-    "texto"
-    "video"
-    "footer";
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 200px auto auto 200px;
+  grid-template-areas: "header" "texto" "video" "footer";
 }
 
 header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "logo logo"
-    "nav1 nav2";
-    justify-items: center;
-    align-items: center;
-    background-color: #333;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "logo logo" "nav1 nav2";
+  justify-items: center;
+  align-items: center;
+  background-color: #333;
 }
 
 header img {
-    width: 100px;
-    grid-area: logo;
+  width: 100px;
+  grid-area: logo;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    border: 1px solid white;
-    border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 nav a:hover {
-    background-color: white;
-    border: 1px solid palevioletred;
-    color: black;
+  background-color: white;
+  border: 1px solid palevioletred;
+  color: black;
 }
 
 nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 #nav1 {
-    grid-area: nav1;
+  grid-area: nav1;
 }
 
 #nav2 {
-    grid-area: nav2;
+  grid-area: nav2;
 }
 
 article {
-    grid-area: texto;
-    margin: 20px;
+  grid-area: texto;
+  margin: 20px;
 }
 
-article h1{
+article h1 {
   font-size: 36px;
   text-align: center;
 }
@@ -86,56 +78,160 @@ article h1{
 article p {
   padding-top: 50px;
   font-size: 22px;
-  text-align:  justify;
+  text-align: justify;
 }
 
 aside {
-    grid-area: video;
+  grid-area: video;
 }
 
 aside iframe {
-    width: 100%;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 footer {
-    grid-area: footer;
-    display: flex;
-    background-color: #333;
-    flex-direction: row;
-    justify-content: space-evenly; /**no queda distribuido**/
-    align-items: center;
+  grid-area: footer;
+  display: flex;
+  background-color: #333;
+  flex-direction: row;
+  justify-content: space-evenly; /**no queda distribuido**/
+  align-items: center;
 }
 
 footer .footer img {
-    width: 50px;
-    margin: 0 10px;
+  width: 50px;
+  margin: 0 10px;
 }
 
-@media (min-width: 700px){
-    #container {
+@media (min-width: 700px) {
+  #container {
     grid-template-columns: 50% 50%;
     grid-template-rows: 200px auto 200px;
-    grid-template-areas:
-    "header header"
-    "texto video"
-    "footer footer"
-    }
-    
-    header {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "nav1 logo nav2";
-        justify-items: center;
-        align-items: center;
-        background-color: #333;
-    }
-    footer {
-        flex-direction: row; 
-    }  
+    grid-template-areas: "header header" "texto video" "footer footer";
+  }
+  header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav1 logo nav2";
+    justify-items: center;
+    align-items: center;
+    background-color: #333;
+  }
+  footer {
+    flex-direction: row;
+  }
+}
+#container-mayoristas {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 200px auto auto 200px;
+  grid-template-areas: "header" "texto" "video" "footer";
 }
 
-/**PRODUCTOS**/
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "logo logo" "nav1 nav2";
+  justify-items: center;
+  align-items: center;
+  background-color: #333;
+}
 
+header img {
+  width: 100px;
+  grid-area: logo;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  background-color: white;
+  border: 1px solid palevioletred;
+  color: black;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#nav1 {
+  grid-area: nav1;
+}
+
+#nav2 {
+  grid-area: nav2;
+}
+
+#article-mayoristas {
+  grid-area: texto;
+  margin: 20px;
+}
+
+article h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+article p {
+  padding-top: 50px;
+  font-size: 22px;
+  text-align: justify;
+}
+
+#aside-mayoristas {
+  grid-area: video;
+  display: flex;
+  justify-content: center;
+}
+
+#aside-mayoristas img {
+  width: 100px;
+  height: 100px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  background-color: #333;
+  flex-direction: row;
+  justify-content: space-evenly; /**no queda distribuido**/
+  align-items: center;
+}
+
+footer .footer img {
+  width: 50px;
+  margin: 0 10px;
+}
+
+@media (min-width: 700px) {
+  #container {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px auto 200px;
+    grid-template-areas: "header header" "texto video" "footer footer";
+  }
+  header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav1 logo nav2";
+    justify-items: center;
+    align-items: center;
+    background-color: #333;
+  }
+  footer {
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
